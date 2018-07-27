@@ -18,13 +18,17 @@ enum StatType: String, Codable {
 struct PlayerData {
     var player:Player
     var teamId:Int
+    
+    func getPlayerDetails(_ completion: @escaping (_ lastStat:  [String: Any]?)->()) {
+        ConnectionManager.getPlayerDetails(playerData: self, completion: completion)
+    }
 }
 
 struct PlayerDetails: Codable {
     var id: Int
     var position: String
     var fullName: String
-    var lastMatchStats: Dictionary<String,String>
+    var lastMatchStats: Dictionary<String,String?>
 }
 
 struct Player: Codable {

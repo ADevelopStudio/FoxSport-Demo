@@ -43,9 +43,9 @@ struct ConnectionManager {
     }
     
     
-    static func getPlayerDetails(playerData:PlayerData, completion: @escaping (_ playerDetails: PlayerDetails, _ errorMessage: String)->()) {
+    static func getPlayerDetails(playerData:PlayerData, completion: @escaping (_ playerDetails:  [String: Any]?)->()) {
         guard let url =  URL(string: self.playerBaseUrl.replacingOccurrences(of: "{{team_id}}", with: String(playerData.teamId)).replacingOccurrences(of: "{{player_id}}", with: String(playerData.player.id))) else {
-            completion([], "Error creating url")
+            completion(nil)
             return
         }
         var request = URLRequest(url: url)
@@ -53,14 +53,15 @@ struct ConnectionManager {
         URLSession.shared.dataTask(with: request) { data, response, error in
             do {
                 guard let data = data else {throw JSONError.noData}
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                guard let jsonSearchResults  = try? decoder.decode(PlayerDetails.self, from: data) else {throw JSONError.conversionFailed}
-                DispatchQueue.main.async {completion(jsonSearchResults, "")}
+                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {throw JSONError.conversionFailed}
+                print(json)
+                DispatchQueue.main.async {completion(json["last_match_stats"] as? [String: Any])}
             } catch let error as JSONError {
-                DispatchQueue.main.async {completion([], error.rawValue)}
+                print(error.rawValue)
+                DispatchQueue.main.async {completion(nil)}
             } catch let error as NSError {
-                DispatchQueue.main.async {completion([], error.debugDescription)}
+                print(error.localizedDescription)
+                DispatchQueue.main.async {completion(nil)}
             }
             }.resume()
     }

@@ -20,12 +20,6 @@ class ViewController: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         ConnectionManager.getData { (matches, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            print(error)
-            print(matches)
-            matches.forEach({
-                print($0.statType)
-            })
-
             matches.forEach({
                 self.resultStackView.addArrangedSubview($0.toMatchView(ontap: {self.performSegue(withIdentifier: "details", sender: $0)}))
             })
