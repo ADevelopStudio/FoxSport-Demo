@@ -31,6 +31,17 @@ extension UIView {
         self.layer.borderWidth = borderWidth
         self.clipsToBounds = true
     }
+    func bumpAnimation(_ completion: @escaping ()->()) {
+        UIView.animate(withDuration: 0.15, animations: {
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { _  in
+            UIView.animate(withDuration: 0.15, animations:{
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }) { _ in
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50), execute: {completion()})
+            }
+        }
+    }
 }
 
 extension Match {

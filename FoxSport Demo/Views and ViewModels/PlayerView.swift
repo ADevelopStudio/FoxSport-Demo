@@ -21,6 +21,9 @@ class PlayerView: UIView {
     
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
         guard let playerData = playerData else {return}
-        self.onTap?(playerData)
+        UIImpactFeedbackGenerator().impactOccurred()
+        self.bumpAnimation {
+            self.onTap?(playerData)
+        }
     }
 }

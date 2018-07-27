@@ -103,8 +103,7 @@
 				626D53D5210AB533002281A3 /* Views and ViewModels */,
 				626D53CF210AAB4A002281A3 /* Models */,
 				626D53AD210AA690002281A3 /* AppDelegate.swift */,
-				626D53AF210AA690002281A3 /* ViewController.swift */,
-				626D53E4210B007F002281A3 /* PlayerDetailsVC.swift */,
+				626D53EA210B119D002281A3 /* View Controllers */,
 				626D53B1210AA690002281A3 /* Main.storyboard */,
 				626D53B4210AA692002281A3 /* Assets.xcassets */,
 				626D53B6210AA692002281A3 /* LaunchScreen.storyboard */,
@@ -151,6 +150,15 @@
 				626D53E8210B0C45002281A3 /* MatchViewModel.swift */,
 			);
 			path = "Views and ViewModels";
+			sourceTree = "<group>";
+		};
+		626D53EA210B119D002281A3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				626D53AF210AA690002281A3 /* ViewController.swift */,
+				626D53E4210B007F002281A3 /* PlayerDetailsVC.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
