@@ -30,7 +30,7 @@ struct Team: Codable {
     var topPlayers: [Player]
 }
 
-struct SearchResult: Codable {
+struct Match: Codable {
     var matchId: String
     var teamA: Team
     var teamB: Team

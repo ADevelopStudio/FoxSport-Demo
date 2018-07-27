@@ -16,6 +16,10 @@
 		626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53CD210AA7A4002281A3 /* ConnectionManager.swift */; };
 		626D53D1210AAB58002281A3 /* Codables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D0210AAB58002281A3 /* Codables.swift */; };
 		626D53D4210AB197002281A3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D3210AB197002281A3 /* Extentions.swift */; };
+		626D53D7210AB676002281A3 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D6210AB676002281A3 /* MatchCell.swift */; };
+		626D53D9210AB6E5002281A3 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 626D53D8210AB6E5002281A3 /* PlayerView.xib */; };
+		626D53DB210AB6EF002281A3 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53DA210AB6EF002281A3 /* PlayerView.swift */; };
+		626D53DD210AB9CE002281A3 /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53DC210AB9CE002281A3 /* ViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		626D53CD210AA7A4002281A3 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		626D53D0210AAB58002281A3 /* Codables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codables.swift; sourceTree = "<group>"; };
 		626D53D3210AB197002281A3 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		626D53D6210AB676002281A3 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		626D53D8210AB6E5002281A3 /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		626D53DA210AB6EF002281A3 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		626D53DC210AB9CE002281A3 /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +91,12 @@
 		626D53AC210AA690002281A3 /* FoxSport Demo */ = {
 			isa = PBXGroup;
 			children = (
+				626D53D5210AB533002281A3 /* Views */,
 				626D53D2210AB187002281A3 /* Support Files */,
 				626D53CF210AAB4A002281A3 /* Models */,
 				626D53AD210AA690002281A3 /* AppDelegate.swift */,
 				626D53AF210AA690002281A3 /* ViewController.swift */,
+				626D53DC210AB9CE002281A3 /* ViewController+TableView.swift */,
 				626D53CD210AA7A4002281A3 /* ConnectionManager.swift */,
 				626D53B1210AA690002281A3 /* Main.storyboard */,
 				626D53B4210AA692002281A3 /* Assets.xcassets */,
@@ -119,6 +129,16 @@
 				626D53D3210AB197002281A3 /* Extentions.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		626D53D5210AB533002281A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				626D53D6210AB676002281A3 /* MatchCell.swift */,
+				626D53D8210AB6E5002281A3 /* PlayerView.xib */,
+				626D53DA210AB6EF002281A3 /* PlayerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +225,7 @@
 				626D53B8210AA692002281A3 /* LaunchScreen.storyboard in Resources */,
 				626D53B5210AA692002281A3 /* Assets.xcassets in Resources */,
 				626D53B3210AA690002281A3 /* Main.storyboard in Resources */,
+				626D53D9210AB6E5002281A3 /* PlayerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +245,11 @@
 			files = (
 				626D53B0210AA690002281A3 /* ViewController.swift in Sources */,
 				626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */,
+				626D53DB210AB6EF002281A3 /* PlayerView.swift in Sources */,
 				626D53D4210AB197002281A3 /* Extentions.swift in Sources */,
+				626D53D7210AB676002281A3 /* MatchCell.swift in Sources */,
 				626D53D1210AAB58002281A3 /* Codables.swift in Sources */,
+				626D53DD210AB9CE002281A3 /* ViewController+TableView.swift in Sources */,
 				626D53AE210AA690002281A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

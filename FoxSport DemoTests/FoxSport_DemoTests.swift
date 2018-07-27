@@ -42,7 +42,7 @@ class FoxSport_DemoTests: XCTestCase {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 if let data = data {
-                    XCTAssertNotNil(try? decoder.decode([SearchResult].self, from: data), "SearchResults JOSN Decoding error")
+                    XCTAssertNotNil(try? decoder.decode([Match].self, from: data), "SearchResults JOSN Decoding error")
                 }
                 XCTAssertEqual(responseURL.absoluteString, url.absoluteString, "HTTP response URL should be equal to original URL")
                 XCTAssertEqual(response.statusCode, 200, "HTTP response status code should be 200")

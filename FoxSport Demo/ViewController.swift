@@ -9,17 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var table: UITableView!
+    var matches =  Array<Match>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.table.backgroundColor = .groupTableViewBackground
+        self.loadData()
+    }
+    
+    func loadData()  {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        ConnectionManager.getData { (results, error) in
+        ConnectionManager.getData { (matches, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             print(error)
-            print(results)
-            results.forEach({
+            print(matches)
+            matches.forEach({
                 print($0.statType)
             })
+            self.matches = matches
+            self.table.reloadData()
         }
     }
     
