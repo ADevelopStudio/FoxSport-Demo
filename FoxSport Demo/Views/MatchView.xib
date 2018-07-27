@@ -17,10 +17,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-4v-c3Y">
-                    <rect key="frame" x="4" y="83" width="182" height="35"/>
+                    <rect key="frame" x="4" y="83" width="182" height="32"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JSE-As-UWP">
-                    <rect key="frame" x="189" y="83" width="182" height="35"/>
+                    <rect key="frame" x="189" y="83" width="182" height="32"/>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hb6-wc-6Fz">
                     <rect key="frame" x="0.0" y="30" width="375" height="50"/>
@@ -63,7 +63,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIa-OD-WSs">
-                    <rect key="frame" x="10" y="3" width="355" height="21"/>
+                    <rect key="frame" x="10" y="8" width="355" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="LRX-os-QSK"/>
                     </constraints>
@@ -83,14 +83,14 @@
                 <constraint firstItem="JSE-As-UWP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-4" id="S8J-qT-cDr"/>
                 <constraint firstItem="b0S-4v-c3Y" firstAttribute="top" secondItem="hb6-wc-6Fz" secondAttribute="bottom" constant="3" id="ZvI-NV-wIr"/>
                 <constraint firstItem="5t6-Ce-aJe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cCg-sN-0JY"/>
-                <constraint firstItem="tIa-OD-WSs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="ciH-1L-f03"/>
-                <constraint firstItem="JSE-As-UWP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="iwm-U6-dnS"/>
+                <constraint firstItem="tIa-OD-WSs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="ciH-1L-f03"/>
+                <constraint firstItem="JSE-As-UWP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-13" id="iwm-U6-dnS"/>
                 <constraint firstItem="JSE-As-UWP" firstAttribute="width" secondItem="b0S-4v-c3Y" secondAttribute="width" id="ixN-3q-1O5"/>
                 <constraint firstItem="hb6-wc-6Fz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="r2V-54-Smo"/>
                 <constraint firstItem="5t6-Ce-aJe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="v9u-Fb-bCN"/>
                 <constraint firstItem="JSE-As-UWP" firstAttribute="top" secondItem="b0S-4v-c3Y" secondAttribute="top" id="vKy-70-7r2"/>
                 <constraint firstItem="5t6-Ce-aJe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vzB-I4-6gu"/>
-                <constraint firstItem="b0S-4v-c3Y" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="xyC-jr-MG1"/>
+                <constraint firstItem="b0S-4v-c3Y" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-13" id="xyC-jr-MG1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -17,7 +17,14 @@ enum StatType: String, Codable {
 }
 struct PlayerData {
     var player:Player
-    var team:Team
+    var teamId:Int
+}
+
+struct PlayerDetails: Codable {
+    var id: Int
+    var position: String
+    var fullName: String
+    var lastMatchStats: Dictionary<String,String>
 }
 
 struct Player: Codable {

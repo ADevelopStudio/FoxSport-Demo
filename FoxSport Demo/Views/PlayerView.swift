@@ -8,17 +8,20 @@
 
 import UIKit
 extension PlayerView {
-    func fillWith(_ player: Player, onTap: @escaping ()->())  {
+    func fillWith(_ playerData: PlayerData, onTap: @escaping (PlayerData)->())  {
         self.onTap = onTap
-        self.name.text = player.shortName
-        self.jumperNumber.text = "Jumper: \(player.jumperNumber)"
-        self.statValue.text = "Stats: \(player.statValue)"
-        self.position.text = player.position
+        self.playerData = playerData
+        self.name.text = playerData.player.shortName
+        self.jumperNumber.text = "👕: \(playerData.player.jumperNumber)"
+        self.statValue.text = "📈: \(playerData.player.statValue)"
+        self.position.text = playerData.player.position
+        ImageLoader().downloadPlayerPhoto(player: playerData.player, completion: {self.profilePic.image = $0})
     }
 }
 
 class PlayerView: UIView {
-    var onTap: (()->())? = nil
+    var onTap: ((PlayerData)->())? = nil
+    var playerData: PlayerData?
     
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -27,7 +30,7 @@ class PlayerView: UIView {
     @IBOutlet weak var position: UILabel!
     
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
-        print("TAPPED")
-        self.onTap?()
+        guard let playerData = playerData else {return}
+        self.onTap?(playerData)
     }
 }

@@ -27,8 +27,14 @@ class ViewController: UIViewController {
             })
 
             matches.forEach({
-                self.resultStackView.addArrangedSubview($0.toMatchView(ontap: {print("TAP MATCH")}))
+                self.resultStackView.addArrangedSubview($0.toMatchView(ontap: {self.performSegue(withIdentifier: "details", sender: $0)}))
             })
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? PlayerDetailsVC, let playerData = sender as? PlayerData {
+            destinationVC.playerData = playerData
         }
     }
     

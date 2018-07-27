@@ -11,7 +11,7 @@ import UIKit
 extension Array where Element == StatType {
     func toBaseUrl(limit: Int = 5) -> URL? {
         if self.isEmpty {return nil}
-        return URL(string: "\(ConnectionManager.dataBaseUrl)\(self.map({";type=\($0.rawValue)"}).joined())?limit=\(limit)&userkey=\(ConnectionManager.userkey)")
+        return URL(string: "\(ConnectionManager.dataBaseUrl)\(self.map({";type=\($0.rawValue)"}).joined())?limit=\(limit)&userkey=\(ConnectionManager.getDataUserKey)")
     }
 }
 extension String {
@@ -34,7 +34,7 @@ extension UIView {
 }
 
 extension Match {
-    func toMatchView(ontap: @escaping ()->()) -> MatchView {
+    func toMatchView(ontap: @escaping (PlayerData)->()) -> MatchView {
         let matchView: MatchView = .fromNib()
         matchView.fillWith(match: self, ontap: ontap)
         return matchView
@@ -42,10 +42,10 @@ extension Match {
 }
 
 extension Player {
-    func toPlayerView(ontap: @escaping ()->()) -> PlayerView {
+    func toPlayerView(teamId:Int, ontap: @escaping (PlayerData)->()) -> PlayerView {
         let playerView: PlayerView = .fromNib()
         playerView.setCorner()
-        playerView.fillWith(self, onTap: ontap)
+        playerView.fillWith(PlayerData(player: self, teamId: teamId), onTap: ontap)
         return playerView
     }
 }
