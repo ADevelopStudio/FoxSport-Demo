@@ -13,6 +13,8 @@
 		626D53B5210AA692002281A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 626D53B4210AA692002281A3 /* Assets.xcassets */; };
 		626D53B8210AA692002281A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626D53B6210AA692002281A3 /* LaunchScreen.storyboard */; };
 		626D53C3210AA692002281A3 /* FoxSport_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53C2210AA692002281A3 /* FoxSport_DemoTests.swift */; };
+		626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53CD210AA7A4002281A3 /* ConnectionManager.swift */; };
+		626D53D1210AAB58002281A3 /* Codables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D0210AAB58002281A3 /* Codables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		626D53BE210AA692002281A3 /* FoxSport DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoxSport DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		626D53C2210AA692002281A3 /* FoxSport_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoxSport_DemoTests.swift; sourceTree = "<group>"; };
 		626D53C4210AA692002281A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		626D53CD210AA7A4002281A3 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		626D53D0210AAB58002281A3 /* Codables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,10 @@
 		626D53AC210AA690002281A3 /* FoxSport Demo */ = {
 			isa = PBXGroup;
 			children = (
+				626D53CF210AAB4A002281A3 /* Models */,
 				626D53AD210AA690002281A3 /* AppDelegate.swift */,
 				626D53AF210AA690002281A3 /* ViewController.swift */,
+				626D53CD210AA7A4002281A3 /* ConnectionManager.swift */,
 				626D53B1210AA690002281A3 /* Main.storyboard */,
 				626D53B4210AA692002281A3 /* Assets.xcassets */,
 				626D53B6210AA692002281A3 /* LaunchScreen.storyboard */,
@@ -94,6 +100,14 @@
 				626D53C4210AA692002281A3 /* Info.plist */,
 			);
 			path = "FoxSport DemoTests";
+			sourceTree = "<group>";
+		};
+		626D53CF210AAB4A002281A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				626D53D0210AAB58002281A3 /* Codables.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				626D53B0210AA690002281A3 /* ViewController.swift in Sources */,
+				626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */,
+				626D53D1210AAB58002281A3 /* Codables.swift in Sources */,
 				626D53AE210AA690002281A3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QX9SH777P;
 				INFOPLIST_FILE = "FoxSport Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QX9SH777P;
 				INFOPLIST_FILE = "FoxSport Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
