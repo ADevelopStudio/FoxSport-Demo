@@ -9,12 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var table: UITableView!
-    var matches =  Array<Match>()
-    
+    @IBOutlet weak var resultStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.table.backgroundColor = .groupTableViewBackground
+        self.view.backgroundColor = .groupTableViewBackground
         self.loadData()
     }
     
@@ -27,8 +25,10 @@ class ViewController: UIViewController {
             matches.forEach({
                 print($0.statType)
             })
-            self.matches = matches
-            self.table.reloadData()
+
+            matches.forEach({
+                self.resultStackView.addArrangedSubview($0.toMatchView(ontap: {print("TAP MATCH")}))
+            })
         }
     }
     

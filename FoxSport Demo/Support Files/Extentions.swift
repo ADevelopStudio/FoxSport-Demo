@@ -14,15 +14,37 @@ extension Array where Element == StatType {
         return URL(string: "\(ConnectionManager.dataBaseUrl)\(self.map({";type=\($0.rawValue)"}).joined())?limit=\(limit)&userkey=\(ConnectionManager.userkey)")
     }
 }
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return "\(prefix(1).uppercased())\(dropFirst())"
+    }
+}
+
 extension UIView {
     class func fromNib<T: UIView>() -> T {
         return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
+    
+    func setCorner(cornerRadius: CGFloat = 7, borderWidth: CGFloat = 1, borderColor: UIColor = .clear)  {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = borderWidth
+        self.clipsToBounds = true
+    }
+}
+
+extension Match {
+    func toMatchView(ontap: @escaping ()->()) -> MatchView {
+        let matchView: MatchView = .fromNib()
+        matchView.fillWith(match: self, ontap: ontap)
+        return matchView
     }
 }
 
 extension Player {
     func toPlayerView(ontap: @escaping ()->()) -> PlayerView {
         let playerView: PlayerView = .fromNib()
+        playerView.setCorner()
         playerView.fillWith(self, onTap: ontap)
         return playerView
     }

@@ -11,6 +11,13 @@ import Foundation
 enum StatType: String, Codable {
     static let allValues = [StatType.fantasyPoints, .tackles, .runs, .runMetres]
     case runMetres = "run_metres", fantasyPoints = "fantasy_points", runs = "runs", tackles = "tackles"
+    var displayName: String {
+        return self.rawValue.split(separator: "_").map({"\($0)".capitalizingFirstLetter()}).joined(separator: " ")
+    }
+}
+struct PlayerData {
+    var player:Player
+    var team:Team
 }
 
 struct Player: Codable {
