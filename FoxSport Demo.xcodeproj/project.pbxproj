@@ -15,6 +15,7 @@
 		626D53C3210AA692002281A3 /* FoxSport_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53C2210AA692002281A3 /* FoxSport_DemoTests.swift */; };
 		626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53CD210AA7A4002281A3 /* ConnectionManager.swift */; };
 		626D53D1210AAB58002281A3 /* Codables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D0210AAB58002281A3 /* Codables.swift */; };
+		626D53D4210AB197002281A3 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626D53D3210AB197002281A3 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		626D53C4210AA692002281A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		626D53CD210AA7A4002281A3 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		626D53D0210AAB58002281A3 /* Codables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codables.swift; sourceTree = "<group>"; };
+		626D53D3210AB197002281A3 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		626D53AC210AA690002281A3 /* FoxSport Demo */ = {
 			isa = PBXGroup;
 			children = (
+				626D53D2210AB187002281A3 /* Support Files */,
 				626D53CF210AAB4A002281A3 /* Models */,
 				626D53AD210AA690002281A3 /* AppDelegate.swift */,
 				626D53AF210AA690002281A3 /* ViewController.swift */,
@@ -108,6 +111,14 @@
 				626D53D0210AAB58002281A3 /* Codables.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		626D53D2210AB187002281A3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				626D53D3210AB197002281A3 /* Extentions.swift */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 			files = (
 				626D53B0210AA690002281A3 /* ViewController.swift in Sources */,
 				626D53CE210AA7A4002281A3 /* ConnectionManager.swift in Sources */,
+				626D53D4210AB197002281A3 /* Extentions.swift in Sources */,
 				626D53D1210AAB58002281A3 /* Codables.swift in Sources */,
 				626D53AE210AA690002281A3 /* AppDelegate.swift in Sources */,
 			);

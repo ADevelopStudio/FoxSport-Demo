@@ -13,11 +13,13 @@ enum JSONError: String, Error {
     case conversionFailed = "ERROR: conversion from JSON failed"
 }
 
+
 struct ConnectionManager {
-    static let recipesBaseUrl = "https://statsapi.foxsports.com.au/3.0/api/sports/league/matches/NRL20172101/topplayerstats.json;type=fantasy_points;type=tackles;type=runs;type=run_metres?limit=5&userkey=A00239D3-45F6-4A0A-810C-54A347F144C2"
-    
-    static func getData(completion: @escaping (_ recipes: [SearchResult], _ errorMessage: String)->()) {
-        guard let url = URL(string: recipesBaseUrl) else {
+    static let dataBaseUrl = "https://statsapi.foxsports.com.au/3.0/api/sports/league/matches/NRL20172101/topplayerstats.json"
+    static let userkey = "A00239D3-45F6-4A0A-810C-54A347F144C2"
+
+    static func getData(types: [StatType] = StatType.allValues, completion: @escaping (_ recipes: [SearchResult], _ errorMessage: String)->()) {
+        guard let url =  types.toBaseUrl() else {
             completion([], "Error creating url")
             return
         }

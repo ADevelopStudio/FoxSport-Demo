@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         ConnectionManager.getData { (results, error) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            print(error)
+            print(results)
+            results.forEach({
+                print($0.statType)
+            })
         }
     }
     

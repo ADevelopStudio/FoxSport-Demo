@@ -16,9 +16,16 @@ class FoxSport_DemoTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
+    
+    func testUrlCreating()  {
+       let exampleUrl =  "https://statsapi.foxsports.com.au/3.0/api/sports/league/matches/NRL20172101/topplayerstats.json;type=fantasy_points;type=tackles;type=runs;type=run_metres?limit=5&userkey=A00239D3-45F6-4A0A-810C-54A347F144C2"
+       let createdUrl = StatType.allValues.toBaseUrl()
+        XCTAssertNotNil(createdUrl, "createdUrl should not be nil")
+        XCTAssertEqual(exampleUrl, createdUrl!.absoluteString, "created Url URL should be equal to example URL")
+    }
+    
     func testAsynchronousURLConnection() {
-        
-        let url = URL(string:  ConnectionManager.recipesBaseUrl)!
+        let url = StatType.allValues.toBaseUrl()!
         let urlExpectation = expectation(description: "GET \(url)")
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

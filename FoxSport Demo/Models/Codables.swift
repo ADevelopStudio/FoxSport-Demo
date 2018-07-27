@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum StatType: String, Codable {
+    static let allValues = [StatType.fantasyPoints, .tackles, .runs, .runMetres]
+    case runMetres = "run_metres", fantasyPoints = "fantasy_points", runs = "runs", tackles = "tackles"
+}
+
 struct Player: Codable {
     var id: Int
     var position: String
@@ -29,5 +34,5 @@ struct SearchResult: Codable {
     var matchId: String
     var teamA: Team
     var teamB: Team
-    var statType: String
+    var statType: StatType
 }
