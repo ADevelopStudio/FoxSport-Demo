@@ -15,6 +15,7 @@ enum StatType: String, Codable {
         return self.rawValue.split(separator: "_").map({"\($0)".capitalizingFirstLetter()}).joined(separator: " ")
     }
 }
+
 struct PlayerData {
     var player:Player
     var teamId:Int

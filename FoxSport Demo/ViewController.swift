@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .groupTableViewBackground
         self.loadData()
     }
     

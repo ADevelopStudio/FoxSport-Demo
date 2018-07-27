@@ -19,7 +19,7 @@ class FoxSport_DemoTests: XCTestCase {
     
     func testUrlCreating()  {
        let exampleUrl =  "https://statsapi.foxsports.com.au/3.0/api/sports/league/matches/NRL20172101/topplayerstats.json;type=fantasy_points;type=tackles;type=runs;type=run_metres?limit=5&userkey=A00239D3-45F6-4A0A-810C-54A347F144C2"
-       let createdUrl = StatType.allValues.toBaseUrl()
+       let createdUrl = [StatType.fantasyPoints, .tackles, .runs, .runMetres].toBaseUrl()
         XCTAssertNotNil(createdUrl, "createdUrl should not be nil")
         XCTAssertEqual(exampleUrl, createdUrl!.absoluteString, "created Url URL should be equal to example URL")
     }
